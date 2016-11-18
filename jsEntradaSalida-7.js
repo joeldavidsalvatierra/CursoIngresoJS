@@ -20,9 +20,9 @@ function restar()
 	var resta;
 	numeroUno=document.getElementById('numeroUno').value;
 	numeroDos=document.getElementById('numeroDos').value;
-	resta=parseInt(numeroUno)-parseInt(numeroDos);
-	//se puede hacer: suma=parseInt(numeroUno);
-	///suma:parseInt(numeroDos)
+	resta=(numeroUno)-(numeroDos);
+	//no hace falta el parseInt en las emas operaciones(resta,divicio y multiplicacion)s
+	//solo en el caso de la suma porque el simbolo de + tambien concatena.
 	alert("la resta "+resta);
 }
 
@@ -32,7 +32,7 @@ function multiplicar()
 	var multiplica;
 	numeroUno=document.getElementById('numeroUno').value;
 	numeroDos=document.getElementById('numeroDos').value;
-	multiplica=parseInt(numeroUno)*parseInt(numeroDos);
+	multiplica=(numeroUno)*(numeroDos);
 	//se puede hacer: suma=parseInt(numeroUno);
 	///suma:parseInt(numeroDos)
 	alert("la multiplicacion es "+multiplica);
@@ -45,7 +45,7 @@ function dividir()
 	var dividir;
 	numeroUno=document.getElementById('numeroUno').value;
 	numeroDos=document.getElementById('numeroDos').value;
-	dividir=parseInt(numeroUno)/parseInt(numeroDos);
+	dividir=(numeroUno)/(numeroDos);
 	//se puede hacer: suma=parseInt(numeroUno);
 	///suma:parseInt(numeroDos)
 	alert("la divicion es "+dividir);
