@@ -1,0 +1,161 @@
+/*Debemos lograr tomar un nombre con 'prompt' 
+y luego mostrarlo por 'alert' al presionar el botón  'MOSTRAR'*/
+function Mostar()
+{   var nombre;
+	nombre=prompt("Ingrese su nombre");
+	alert(nombre);
+	
+}
+
+
+/*Debemos lograr tomar un dato por 'ID'
+y luego mostrarlo por 'Alert' al presionar el botón  'MOSTRAR'*/
+function Mostar()
+{
+	var nombre
+	nombre=document.getElementById("elNombre").value;
+	alert(nombre);
+}
+
+
+
+/* 
+	Debemos lograr tomar un dato por 'PROMPT' 
+	y lo muestro por 'getElementById' al presionar el botón 'MOSTRAR'
+*/
+function Mostar()
+{
+	var nombre
+	nombre=prompt("Por favor ingrese su nombre");
+	document.getElementById('elNombre').value=nombre;
+}
+
+
+/*Debemos lograr tomar nombre y edad por ID y mostrarlos concatenados 
+ej.: "Usted se llama José y tiene 66 años" 	*/
+function Mostar()
+{	
+	var nombre;
+	var edad;
+	nombre=document.getElementById('elNombre').value;
+    edad=document.getElementById('laEdad').value;
+    alert("Usted se llama "+nombre+" y tiene "+edad+" años" )
+}
+
+
+/*Debemos lograr tomar Los numeros por ID ,
+transformarlos a enteros (parseInt) y Sumarlos.
+Mostar el resulto por medio de "ALERT"*/
+function sumar()
+{
+	var numeroUno;
+	var numeroDos;
+	var suma;
+	numeroUno=document.getElementById('numeroUno').value;
+	numeroDos=document.getElementById('numeroDos').value;
+	suma=parseInt(numeroUno)+parseInt(numeroDos);
+	alert("La suma es "+suma);
+}
+
+
+/*Debemos lograr tomar Los numeros por ID ,
+transformarlos a enteros (parseInt),realizar la operación correcta y 
+mostar el resulto por medio de "ALERT"
+ej.: "la Resta es 750"*/ 
+function sumar()
+{	
+	var numeroUno;
+	var numeroDos;
+	var suma;
+	numeroUno=document.getElementById('numeroUno').value;
+	numeroDos=document.getElementById('numeroDos').value;
+	suma=parseInt(numeroUno)+parseInt(numeroDos);
+	alert("la suma es: "+suma);
+}
+
+function restar()
+{	var numeroUno;
+	var numeroDos;
+	var resta;
+	numeroUno=document.getElementById('numeroUno').value;
+	numeroDos=document.getElementById('numeroDos').value;
+	resta=(numeroUno)-(numeroDos);
+	alert("la resta es: "+resta);
+}
+	
+
+
+function multiplicar()
+{ 
+	var numeroUno;
+	var numeroDos;
+	var multi;
+	numeroUno=document.getElementById('numeroUno').value;
+	numeroDos=document.getElementById('numeroDos').value;
+	multi=(numeroUno)*(numeroDos);
+	alert("la multiplicacion es: "+multi);
+}
+
+function dividir()
+{
+	var numeroUno;
+	var numeroDos;
+	var divi;
+	numeroUno=document.getElementById('numeroUno').value;
+	numeroDos=document.getElementById('numeroDos').value;
+	divi=(numeroUno)/(numeroDos);
+	alert("la division es: "+divi);
+}
+
+
+/*Debemos lograr tomar Los numeros por ID ,
+transformarlos a enteros (parseInt),realizar la operación correcta y 
+mostrar el resto entre el dividendo y el divisor.
+ej.: "El resto es 0 ."*/
+function SacarResto()
+{
+	var dividendo;
+	var divisor;
+	var resto;
+	dividendo=document.getElementById('numeroDividendo').value;
+	divisor=document.getElementById('numeroDivisor').value;
+	resto=dividendo%divisor;
+	alert("El resto es "+resto);
+}
+
+/*Debemos lograr tomar el importe por ID ,
+transformarlo a entero (parseInt), luego
+mostrar el importe con un aumento del 10 %
+en el cuadro de texto "RESULTADO".*/
+function MostrarAumento()
+{
+	var sueldo;
+	var aumento;
+	var resultado;
+	sueldo=document.getElementById('sueldo').value;
+	aumento=sueldo*1.10;
+	resultado=document.getElementById('resultado').value=aumento;
+	
+	
+}
+
+/*Debemos lograr tomar el importe por ID.
+Transformarlo a entero (parseInt), luego
+mostrar el importe con un Descuento del 25 %
+en el cuadro de texto "RESULTADO"*/
+function MostrarAumento()
+{
+	var importe;
+	var descuentoTotal;
+	var resultado;
+	importe=document.getElementById('importe').value;
+	descuento=importe*0.25;
+	resultado=document.getElementById('resultado').value=descuentoTotal;
+	descuentoTotal=importe-descuento;
+}
+
+//Debemos lograr mostrar un mensaje al presionar el botón  'MOSTRAR'.
+function Mostar()
+{
+alert("Esto funciona de maravilla");
+}
