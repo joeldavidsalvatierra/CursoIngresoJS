@@ -10,6 +10,7 @@ function Mostrar()
 		alert("Es adolescente");
 	}*/
 	//se puede hacer de las dos formas, la de arriva o la de abajo
+	//&& es "y"
 	if (laEdad>=13 && laEdad<=17)
 	{
 		alert("Es adolescente");

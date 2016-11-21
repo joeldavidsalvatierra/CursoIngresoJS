@@ -15,6 +15,8 @@ function Mostrar()
 	  {
 	  	alert("Es un niño");
 	  }*/
+	  //se puede hacer de las dos formas pero la mas facil es la ultima
+	  //se complica menos ay que pensar.
 	if (laEdad<13)
 {	
 	alert("Es un niño");
