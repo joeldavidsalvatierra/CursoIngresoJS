@@ -51,17 +51,17 @@ function CalcularPrecio ()
  	  	 {
  	  	 	if (marca=="ArgentinaLuz")
  	  	 	 {
- 	  	 	 	precioFinal==precioBruto*0.85;
+ 	  	 	 	precioFinal=precioBruto*0.85;
  	  	 	 }//if (marca=="ArgentinaLuz")
  	  	 	 	else
  	  	 	 		{
  	  	 	 			if (marca=="FelipeLamparas")
  	  	 	 			 {
- 	  	 	 			 	precioFinal==precioBruto*0.90;
+ 	  	 	 			 	precioFinal=precioBruto*0.90;
  	  	 	 			 }//if (marca=="FelipeLamparas")
  	  	 	 			 	else
  	  	 	 			 	{
- 	  	 	 			 		precioFinal==precioBruto*0.95;
+ 	  	 	 			 		precioFinal=precioBruto*0.95;
  	  	 	 			 	}
  	  	 	 		}
  	  	 }//if (cantidad==3)
@@ -73,6 +73,5 @@ function CalcularPrecio ()
  	  	  }
 
  	document.getElementById('precioDescuento').value=precioFinal;
-
 
 }
