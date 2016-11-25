@@ -10,61 +10,69 @@ E.	Si el importe final con descuento suma más de $120  se debe sumar un 10% de 
  */
 function CalcularPrecio () 
 {
- 	var cantidadLamparas;
- 	var marcas;
- 	var descuentoUno;
- 	var descuentoDos;
- 	var descuentoTres;
- 	var descuentoCuatro;
- 	var descuentoCinco;
- 	var descuentoSeis;
- 	var descuentoSiete;
- 	//var precioDescuento;
- 	var descuentoTodos;
- 	cantidadLamparas=document.getElementById('Cantidad').value;
- 	marcas=document.getElementById('Marca').value;
- 	descuentoTodos=35*cantidadLamparas*0.50;
- 	descuentoUno=35*5*0.60;
- 	descuentoDos=35*5*0.70;
- 	descuentoTres=35*4*0.75;
- 	descuentoCuatro=35*4*0.80;
- 	descuentoCinco=35*3*0.85;
- 	descuentoSeis=35*3*0.90;
- 	descuentoSiete=35*3*0.95;
- 	console.log(marcas);
- 	if (cantidadLamparas>=6)
- 	 {
- 	 	document.getElementById('precioDescuento').value=descuentoTodos;
- 	 }//if (cantidadLamparas>=6)
- 	 if (cantidadLamparas==5 && marcas=="ArgentinaLuz") 
- 	 {
- 	 	document.getElementById('precioDescuento').value=descuentoUno;
- 	 }
- 	 else
- 	 		{
- 	 			document.getElementById('precioDescuento').value=descuentoDos;
- 	 		}//if (cantidadLamparas==5 && marcas=="ArgentinaLuz")
- 	 if (cantidadLamparas==4 && marcas=="ArgentinaLuz"||marcas=="FelipeLamparas")
+ 	var cantidad;
+ 	var marca;
+ 	var precioBruto;
+ 	var precioFinal;
+ 	marca=document.getElementById('Marca').value;
+ 	cantidad=document.getElementById('Cantidad').value;
+ 	console.log(marca+cantidad);
+ 	precioBruto=cantidad*35;
+ 	precioFinal=precioBruto;
+ 	console.log("precioBruto :"+precioBruto);
+ 	if(cantidad>5)
+ 	{
+ 		precioFinal=precioBruto*0.5;
+ 	}//if(cantidad>5)
+ 	if (cantidad==5)
+ 	 	{
+ 	 		if (marca=="ArgentinaLuz") 
+ 	 			{
+ 	 				precioFinal=precioBruto*0.6;
+ 	 			}//if (marca=="ArgentinaLuz"); 
+ 	 			else
+ 	 			{
+ 	 				precioFinal=precioBruto*0.7;
+ 	 			}
+ 	 	}//if (cantidad==5)
+ 	 if (cantidad==4)
  	  {
- 	  		document.getElementById('precioDescuento').value=descuentoTres;
- 	  }
- 	  	else
- 	  	{
- 	  		document.getElementById('precioDescuento').value=descuentoCuatro;
- 	  	}//if (cantidadLamparas==4 && marcas=="ArgentinaLuz"||"FelipeLamparas")
- 	  if (cantidadLamparas==3 && marcas!="ArgentinaLuz"||marcas!="FelipeLamparas")
- 	   {
- 	   		document.getElementById('precioDescuento').value=descuentoSiete;
- 	   }
- 	  		if (cantidadLamparas==3 && marcas=="ArgentinaLuz")
- 	   		{
- 	   			document.getElementById('precioDescuento').value=descuentoCinco;
- 	   		}
- 	   			if (cantidadLamparas==3 && marcas=="FelipeLamparas")
- 	   			{
- 	   				document.getElementById('precioDescuento').value=descuentoSeis;
- 	   			}
- 	   	
+ 	  		if (marca=="ArgentinaLuz" || marca=="FelipeLamparas") 
+ 	 			{
+ 	 				precioFinal=precioBruto*0.75;
+ 	 			} //if (marca=="ArgentinaLuz" || marca=="FelipeLamparas") 
+ 	 			else
+ 	 			{
+ 	 				precioFinal=precioBruto*0.8;
+ 	 			}
 
- 	
+ 	  }//if (cantidad==4)
+ 	  if (cantidad==3)
+ 	  	 {
+ 	  	 	if (marca=="ArgentinaLuz")
+ 	  	 	 {
+ 	  	 	 	precioFinal==precioBruto*0.85;
+ 	  	 	 }//if (marca=="ArgentinaLuz")
+ 	  	 	 	else
+ 	  	 	 		{
+ 	  	 	 			if (marca=="FelipeLamparas")
+ 	  	 	 			 {
+ 	  	 	 			 	precioFinal==precioBruto*0.90;
+ 	  	 	 			 }//if (marca=="FelipeLamparas")
+ 	  	 	 			 	else
+ 	  	 	 			 	{
+ 	  	 	 			 		precioFinal==precioBruto*0.95;
+ 	  	 	 			 	}
+ 	  	 	 		}
+ 	  	 }//if (cantidad==3)
+ 	  	 if (precioFinal>120)
+ 	  	  {
+ 	  	  	var impuesto=precioFinal*0.10;
+ 	  	  	precioFinal=precioFinal*1.10;
+ 	  	  	alert("Usted pago de IIBB "+impuesto);
+ 	  	  }
+
+ 	document.getElementById('precioDescuento').value=precioFinal;
+
+
 }
